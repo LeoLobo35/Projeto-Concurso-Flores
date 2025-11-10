@@ -322,15 +322,16 @@
         box-shadow: var(--shadow-medium);
         border-radius: var(--radius-lg); /* 20px */
         overflow: hidden; /* Garante que a imagem respeite o radius */
+        background-color: transparent;
       }
       .hero-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: var(--radius-lg);
-        /* Otimização de LCP: width/height + aspect-ratio */
-        aspect-ratio: 1200 / 900;
-      }
+  width: 100%;
+  height: auto; /* Mudou de 100% para auto */
+  object-fit: contain; /* Mudou de cover para contain */
+  border-radius: var(--radius-lg);
+  /* Remove ou comenta a linha aspect-ratio */
+  /* aspect-ratio: 1200 / 900; */
+    }
       
       /* --- 8. Media Query (Layout Desktop Hero) --- */
       @media (min-width: 960px) {
