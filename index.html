@@ -21,10 +21,11 @@
       Instrui o navegador a carregar esta imagem com prioridade máxima.
     -->
     <link rel="preload" as="image" 
-          href="hero-acs-flores-1200.webp" 
-          imagesrcset="hero-acs-flores-800.webp 800w, hero-acs-flores-1200.webp 1200w"
-          imagesizes="(max-width: 959px) 100vw, 560px"
-          fetchpriority="high">
+      href="https://res.cloudinary.com/dya6548zi/image/upload/f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp"
+      imagesrcset="https://res.cloudinary.com/dya6548zi/image/upload/w_400,f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp 400w,
+                   https://res.cloudinary.com/dya6548zi/image/upload/w_600,f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp 600w"
+      imagesizes="(max-width: 959px) 100vw, 560px"
+      fetchpriority="high">
 
     <!-- 5. Fontes (Não-bloqueantes) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -318,20 +319,25 @@
 
       /* --- 7. Hero Mídia (Direita) --- */
       .hero-media {
-        position: relative;
-        box-shadow: var(--shadow-medium);
-        border-radius: var(--radius-lg); /* 20px */
-        overflow: hidden; /* Garante que a imagem respeite o radius */
-        background-color: transparent;
-      }
+  position: relative;
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-lg); /* 20px */
+  overflow: hidden;
+  /* Fundo gradiente para quando imagem tem transparência */
+  background: linear-gradient(135deg, #F7EFE7 0%, #E8F4F8 100%);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
       .hero-media img {
   width: 100%;
-  height: auto; /* Mudou de 100% para auto */
-  object-fit: contain; /* Mudou de cover para contain */
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius-lg);
-  /* Remove ou comenta a linha aspect-ratio */
-  /* aspect-ratio: 1200 / 900; */
-    }
+  max-height: 560px;
+  /* aspect-ratio: 1200 / 900; ← CERTIFIQUE-SE QUE ESTÁ COMENTADO OU DELETADO */
+}
       
       /* --- 8. Media Query (Layout Desktop Hero) --- */
       @media (min-width: 960px) {
@@ -1376,14 +1382,14 @@
                 <!-- Coluna Direita: Mídia (LCP) -->
 <div class="hero-media">
     <img 
-        src="https://res.cloudinary.com/dya6548zi/image/upload/w_800,h_800,c_scale,f_auto,q_auto/v1762743454/Mockup_1-removebg-preview_zjuuru.avif"
-        srcset="https://res.cloudinary.com/dya6548zi/image/upload/w_400,h_400,c_scale,f_auto,q_auto/v1762743454/Mockup_1-removebg-preview_zjuuru.avif 400w, 
-                https://res.cloudinary.com/dya6548zi/image/upload/w_600,h_600,c_scale,f_auto,q_auto/v1762743454/Mockup_1-removebg-preview_zjuuru.avif 600w,
-                https://res.cloudinary.com/dya6548zi/image/upload/w_800,h_800,c_scale,f_auto,q_auto/v1762743454/Mockup_1-removebg-preview_zjuuru.avif 800w"
+        src="https://res.cloudinary.com/dya6548zi/image/upload/f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp"
+        srcset="https://res.cloudinary.com/dya6548zi/image/upload/w_400,f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp 400w,
+                https://res.cloudinary.com/dya6548zi/image/upload/w_600,f_auto,q_auto/v1762746656/MCK-1_1_ytuoxa.webp 600w,
+                https://res.cloudinary.com/dya6548zi/image/upload/w_800,f_auto,q_auto,e_sharpen:50/v1762746656/MCK-1_1_ytuoxa.webp 800w"
         sizes="(max-width: 960px) 100vw, 560px"
-        alt="Mockup 3D da Apostila ACS Flores-PE - 57 páginas focadas no edital IGEDUC"
-        width="800"
-        height="800"
+        alt="Mockup 3D da Apostila Agente Comunitário de Saúde Flores-PE com materiais de estudo completos"
+        width="600"
+        height="600"
         fetchpriority="high"
         loading="eager"
         decoding="async"
