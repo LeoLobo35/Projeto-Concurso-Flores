@@ -200,6 +200,13 @@
         background-color: var(--c-secondary);
         flex-shrink: 0;
       }
+        .logo__image {
+          width: 48px;
+          height: 48px;
+          border-radius: 8px;
+          flex-shrink: 0;
+          object-fit: contain;
+    }
       .logo__text {
         font-family: var(--ff-heading);
         font-weight: 600;
@@ -1328,12 +1335,19 @@
       DOBRA 1 (FIXA): Header
     -->
     <header class="header" role="banner">
-      <a href="#" class="logo">
-        <div class="logo__symbol"></div>
-        <span class="logo__text">Apostila ACS Flores-PE</span>
-      </a>
-      <!-- <nav> (Opcional) </nav> -->
-    </header>
+  <a href="#" class="logo">
+    <img 
+      src="https://res.cloudinary.com/dya6548zi/image/upload/v1762748345/logo_wkzgxb.png"
+      alt="Logo Apostila ACS Flores-PE"
+      width="48"
+      height="48"
+      loading="eager"
+      decoding="async"
+      class="logo__image"
+    >
+    <span class="logo__text">Apostila ACS Flores-PE</span>
+  </a>
+</header>
 
     <!-- 
       DOBRA 1: Hero Section
